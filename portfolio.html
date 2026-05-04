@@ -405,13 +405,35 @@
 
   @media (max-width: 1000px) {
     .hero { grid-template-columns: 1fr; }
-    .hero-image { display: none; }
+    .hero-image {
+      display: flex;
+      order: -1;
+      padding: 32px 40px 0;
+    }
+    .photo-frame {
+      width: min(100%, 320px);
+      height: auto;
+      aspect-ratio: 370 / 470;
+    }
     .hero-text { padding: 60px 40px; }
     section { padding: 70px 40px; }
     .about-grid,.edu-grid,.projects-grid,.exp-grid,.skills-bars-grid { grid-template-columns: 1fr; }
     nav,.lang-bar { padding: 12px 24px; }
     .contact-strip { padding: 16px 40px; }
     .soft-group { grid-column: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-image { padding: 24px 24px 0; }
+    .hero-text { padding: 40px 24px 56px; }
+    .photo-badge {
+      left: 0;
+      bottom: -12px;
+      padding: 10px 14px;
+      max-width: calc(100% - 16px);
+    }
+    section { padding: 64px 24px; }
+    .contact-strip { padding: 16px 24px; }
   }
 </style>
 </head>
@@ -513,7 +535,7 @@
     <div class="about-text">
       <div data-lang="en">
         <p>Finance and accounting professional with over <strong>5 years of progressive experience</strong> across major corporations and SMEs in France and Cameroon — including Orange Cameroon and Wakam (Paris insurtech).</p>
-        <p>Holder of a <strong>Master's degree in Finance from CEFAM Lyon</strong>, I specialize in general accounting, financial reporting, budget control, and ERP systems (SAP, Sage Saari, Sage FRP 1000, Yooz, Cleemy).</p>
+        <p>Holder of a <strong>Master's degree in Finance from CEFAM Lyon</strong>, I'm specialize in general accounting, financial reporting, budget control, and ERP systems (SAP, Sage Saari, Sage FRP 1000, Yooz, Cleemy).</p>
         <p>Currently based near Paris and available for opportunities in <strong>Paris or across the European Union</strong>. Fluent in French and English, with beginner German.</p>
       </div>
       <div data-lang="fr">
